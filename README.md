@@ -55,6 +55,6 @@ Create a Heroku project:
 
 Create your messenger bot on https://developers.facebook.com/ 
 
-Add the products Messenger and Webhooks. On the Webhooks tab, create a New Subscription with the Callback URL as `http://<your-heroku-subdomain>.herokuapp.com/webhook/` and the Verify Token as ``johnharvard``. For Fields, check ONLY the one with ``message``.
+Add the products Messenger and Webhooks. On the Webhooks tab, create a New Subscription with the Callback URL as `http://<your-heroku-subdomain>.herokuapp.com/webhook/` and the Verify Token as ``johnharvard``. For Fields, check ONLY ``message``.
 
 On the Messenger tab, under "Webhooks", subscribe the webhook we just created to the page you want to connect your bot to. Also, under "Token Generation", generate a token for the page we're connecting to and replace the variable ``page_access_token`` at the top of ``message.py`` with it.
