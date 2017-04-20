@@ -1,10 +1,12 @@
 import requests
 
 # This is the token that you generate for the page hooked up to your bot
-page_access_token = "<REPLACE WITH YOUR PAGE ACCESS TOKEN!!!!>"
+params = {
+    'access_token': "<REPLACE WITH YOUR PAGE ACCESS TOKEN!!!!>"
+}
 
 # Messenger request URL
-url = "https://graph.facebook.com/v2.8/me/messages?access_token=" + page_access_token
+url = "https://graph.facebook.com/v2.8/me/messages"
 
 """
     Messenger sends us batches of messages. Thus, the payload that we receive

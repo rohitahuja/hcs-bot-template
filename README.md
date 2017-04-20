@@ -11,27 +11,34 @@ A project starter template for Django 1.11 that is production ready for creating
 
 ## How to Use
 
-To use this project, follow these steps:
+Before we begin, please ensure that you have:
+
+- Created a Facebook page you can connect your bot to (i.e. My Bot)
+- A Heroku account and the heroku client installed and logged into on your terminal:
+    
+    $ brew install heroku
+    $ heroku login
 
 ### Seting up your Environment
 
-Install Django:
+Install Django and virtualenv:
 
     $ pip install django
+    $ pip install virtualenv
 
 ### Creating your Project
 
 Using this template to create a new Django app is easy:
 
-    $ django-admin.py startproject --template=https://github.com/rohitahuja/hcs-bot-template/archive/master.zip --name=Procfile helloworld
+    $ django-admin.py startproject --template=https://github.com/rohitahuja/hcs-bot-template/archive/master.zip --name=Procfile my_bot
 
-You can replace ``helloworld`` with your desired project name.
+You can replace ``my_bot`` with your desired project name.
 
 ### Setting up the Project
 
 Enter your project folder:
 
-    $ cd helloworld
+    $ cd my_bot
 
 Create your virtual environment and activate it:
 
@@ -41,6 +48,20 @@ Create your virtual environment and activate it:
 Install dependencies:
     
     $ pip install -r requirements.txt
+
+### Understanding the Code
+
+- ``hcs_bot/urls.py → webhook/``
+    - We’ve created a ``webhook/`` endpoint here that our Messenger Bot will hit when it receives a message
+    - When our webhook/ endpoint is hit, it calls the ``webhook()`` function in ``bot/views.py``
+- ``bot/views.py → webhook()``
+    - Calls ``handle_entries()``, which is the main message handling function 
+- ``bot/message.py → handle_entries()``
+    - Iterates over and calls ``handle_message()`` on each message object
+- ``bot/message.py → handle_message()``
+    - Creates the response to the received message and sends it by calling ``send_message()``
+- ``bot/message.py → send_message()``
+    - Structures the response and makes the post request to the Messenger API
 
 ### Deployment to Heroku
 
