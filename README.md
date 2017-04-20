@@ -16,9 +16,10 @@ Before we begin, please ensure that you have:
 - Created a Facebook page you can connect your bot to (i.e. My Bot)
 - A Heroku account and the heroku client installed and logged into on your terminal:
 
-
-    $ brew install heroku
-    $ heroku login
+    ```
+    brew install heroku
+    heroku login
+    ```
 
 ### Seting up your Environment
 
