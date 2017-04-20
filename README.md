@@ -38,6 +38,10 @@ Create your virtual environment and activate it:
     $ virtualenv venv
     $ source ./venv/bin/activate
 
+Install dependencies:
+    
+    $ pip install -r requirements.txt
+
 ### Deployment to Heroku
 
 Initialize version control for the project:
