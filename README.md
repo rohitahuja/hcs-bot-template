@@ -1,6 +1,6 @@
 # Django Messenger Bot Template
 
-A project starter template for Django 1.11 that is production ready for creating a Facebook Messenger bot deployed to Heroku.
+A project starter template for Django 1.11 that is production ready for creating a Facebook Messenger bot deployed to Heroku. Created by Bytesize.
 
 ## Features
 
@@ -23,7 +23,7 @@ Install Django:
 
 Using this template to create a new Django app is easy:
 
-    $ django-admin.py startproject --template=https://github.com/rohitahuja/django-bytesize-template/archive/master.zip --name=Procfile helloworld
+    $ django-admin.py startproject --template=https://github.com/rohitahuja/hcs-bot-template/archive/master.zip --name=Procfile helloworld
 
 You can replace ``helloworld`` with your desired project name.
 
